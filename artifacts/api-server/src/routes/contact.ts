@@ -4,7 +4,12 @@ import {
   SubmitAdvisorInterestBody,
   SubmitGeneralContactBody,
 } from "@workspace/api-zod";
-import { logger } from "../lib/logger";
+import { logger } from "../lib/logger.js";
+import {
+  sendPartnerInquiryEmail,
+  sendAdvisorInterestEmail,
+  sendGeneralContactEmail,
+} from "../lib/email.js";
 
 const router: IRouter = Router();
 
@@ -115,6 +120,8 @@ router.post("/contact/partner", (req, res) => {
     "Partner inquiry received",
   );
 
+  sendPartnerInquiryEmail(data);
+
   res.json(OK);
 });
 
@@ -177,6 +184,8 @@ router.post("/contact/advisor", (req, res) => {
     "Advisor interest received",
   );
 
+  sendAdvisorInterestEmail(data);
+
   res.json(OK);
 });
 
@@ -236,6 +245,8 @@ router.post("/contact/general", (req, res) => {
     },
     "General contact received",
   );
+
+  sendGeneralContactEmail(data);
 
   res.json(OK);
 });
