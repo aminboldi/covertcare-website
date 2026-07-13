@@ -68,11 +68,13 @@ export function Header() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — absolute so it anchors directly below the sticky header
+           regardless of whether the announcement bar is visible */}
       {mobileMenuOpen && (
-        <div 
+        <div
           id="mobile-menu"
-          className="fixed inset-0 top-16 z-50 bg-background md:hidden overflow-y-auto border-t"
+          className="absolute top-full left-0 right-0 z-50 bg-background overflow-y-auto border-t shadow-lg"
+          style={{ maxHeight: "calc(100dvh - 4rem)" }}
         >
           <div className="container mx-auto px-4 py-6 flex flex-col gap-6">
             <nav className="flex flex-col gap-4">

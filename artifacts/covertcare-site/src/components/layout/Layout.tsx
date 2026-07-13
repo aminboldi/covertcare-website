@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { AnnouncementBar } from "./AnnouncementBar";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { ScrollToTop } from "./ScrollToTop";
 
 export function Layout({ children }: { children: ReactNode }) {
   return (
@@ -12,6 +13,7 @@ export function Layout({ children }: { children: ReactNode }) {
       >
         Skip to main content
       </a>
+      <ScrollToTop />
       <AnnouncementBar />
       <Header />
       <main id="main-content" className="flex-1">
