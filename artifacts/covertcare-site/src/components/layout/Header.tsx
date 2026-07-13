@@ -31,6 +31,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center gap-3 group">
+              <img src="/images/logo.png" alt="CovertCare" className="h-8 w-8 object-contain" />
               <span className="font-serif font-semibold text-xl tracking-tight text-primary">CovertCare</span>
             </Link>
             <span className="hidden sm:inline-flex items-center rounded-sm bg-muted px-2 py-0.5 text-xs font-medium text-muted-foreground">
