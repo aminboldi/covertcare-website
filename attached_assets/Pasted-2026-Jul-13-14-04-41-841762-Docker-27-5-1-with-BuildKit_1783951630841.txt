@@ -1,0 +1,209 @@
+2026-Jul-13 14:04:41.841762
+Docker 27.5.1 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Jul-13 14:04:41.846924
+Starting deployment of aminboldi/covertcare-website:main to localhost.
+2026-Jul-13 14:04:42.111760
+Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.14
+2026-Jul-13 14:04:43.279651
+----------------------------------------
+2026-Jul-13 14:04:43.288047
+Importing aminboldi/covertcare-website:main (commit sha 3424c73a09f968fdeba609bce6f86d4f14e2f4d3) to /artifacts/n4vyu2ututha5ojkc5xv8ghe.
+2026-Jul-13 14:04:45.432073
+Image not found (dh7ychb3t4haxwpnec26np2f:3424c73a09f968fdeba609bce6f86d4f14e2f4d3). Building new image.
+2026-Jul-13 14:04:46.877501
+----------------------------------------
+2026-Jul-13 14:04:46.884406
+Building docker image started.
+2026-Jul-13 14:04:46.890634
+To check the current progress, click on Show Debug Logs.
+2026-Jul-13 14:04:52.968807
+========================================
+2026-Jul-13 14:04:52.974845
+Deployment failed: Command execution failed (exit code 1): docker exec n4vyu2ututha5ojkc5xv8ghe bash -c 'bash /artifacts/build.sh'
+2026-Jul-13 14:04:52.974845
+Error: #0 building with "default" instance using docker driver
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#1 [internal] load build definition from Dockerfile.site
+2026-Jul-13 14:04:52.974845
+#1 transferring dockerfile: 1.28kB done
+2026-Jul-13 14:04:52.974845
+#1 DONE 0.0s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#2 [internal] load metadata for docker.io/library/node:20-alpine
+2026-Jul-13 14:04:52.974845
+#2 ...
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#3 [internal] load metadata for docker.io/library/nginx:alpine
+2026-Jul-13 14:04:52.974845
+#3 DONE 1.1s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#2 [internal] load metadata for docker.io/library/node:20-alpine
+2026-Jul-13 14:04:52.974845
+#2 DONE 1.1s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#4 [internal] load .dockerignore
+2026-Jul-13 14:04:52.974845
+#4 transferring context: 2B done
+2026-Jul-13 14:04:52.974845
+#4 DONE 0.0s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#5 [stage-1 1/3] FROM docker.io/library/nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa
+2026-Jul-13 14:04:52.974845
+#5 resolve docker.io/library/nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa 0.0s done
+2026-Jul-13 14:04:52.974845
+#5 ...
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#6 [internal] load build context
+2026-Jul-13 14:04:52.974845
+#6 transferring context: 1.96MB 0.0s done
+2026-Jul-13 14:04:52.974845
+#6 DONE 0.1s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#5 [stage-1 1/3] FROM docker.io/library/nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa
+2026-Jul-13 14:04:52.974845
+#5 sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa 10.33kB / 10.33kB done
+2026-Jul-13 14:04:52.974845
+#5 sha256:35cd77497979abe70dc8d26f5ae60811eea233a2eb5dc03c2ee30972caeb303e 2.50kB / 2.50kB done
+2026-Jul-13 14:04:52.974845
+#5 sha256:ea51152ef8c480b999cee0271a288c698704b18483276119b1253e576ef3232f 12.32kB / 12.32kB done
+2026-Jul-13 14:04:52.974845
+#5 sha256:e6f31ffc071e5560b82a8685fba8214954e5721e3e49269d00958316edbe89fe 0B / 3.84MB 0.3s
+2026-Jul-13 14:04:52.974845
+#5 sha256:c16defe09b2f86b04c4143bb610095be90732794fce5c56fb7185f02feadd879 0B / 1.89MB 0.4s
+2026-Jul-13 14:04:52.974845
+#5 sha256:5b429a43b8dfa079c3ac95537bd88d5f1ac70e478c64f100b8ef6aa9c555ebc2 0B / 628B 0.4s
+2026-Jul-13 14:04:52.974845
+#5 sha256:e6f31ffc071e5560b82a8685fba8214954e5721e3e49269d00958316edbe89fe 3.84MB / 3.84MB 0.4s done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:e6f31ffc071e5560b82a8685fba8214954e5721e3e49269d00958316edbe89fe
+2026-Jul-13 14:04:52.974845
+#5 sha256:967885d218c57d3ce2a4e906131fb25f59e6f56cce51d87dde7d74b0e7465675 0B / 955B 0.5s
+2026-Jul-13 14:04:52.974845
+#5 sha256:c16defe09b2f86b04c4143bb610095be90732794fce5c56fb7185f02feadd879 1.89MB / 1.89MB 0.5s done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:e6f31ffc071e5560b82a8685fba8214954e5721e3e49269d00958316edbe89fe 0.1s done
+2026-Jul-13 14:04:52.974845
+#5 sha256:ab1fd90497517c799d4fb351bc1a7ae8b58e231345d4948ae8ac73c75b320b35 0B / 405B 0.6s
+2026-Jul-13 14:04:52.974845
+#5 sha256:5b429a43b8dfa079c3ac95537bd88d5f1ac70e478c64f100b8ef6aa9c555ebc2 628B / 628B 0.6s done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:c16defe09b2f86b04c4143bb610095be90732794fce5c56fb7185f02feadd879
+2026-Jul-13 14:04:52.974845
+#5 sha256:ce42635eeddd348e8266227a36db92cea8a45d5177d03e9a922a7bfb25762b7f 0B / 1.21kB 0.7s
+2026-Jul-13 14:04:52.974845
+#5 sha256:967885d218c57d3ce2a4e906131fb25f59e6f56cce51d87dde7d74b0e7465675 955B / 955B 0.7s done
+2026-Jul-13 14:04:52.974845
+#5 sha256:ab1fd90497517c799d4fb351bc1a7ae8b58e231345d4948ae8ac73c75b320b35 405B / 405B 0.7s done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:c16defe09b2f86b04c4143bb610095be90732794fce5c56fb7185f02feadd879 0.1s done
+2026-Jul-13 14:04:52.974845
+#5 sha256:ce42635eeddd348e8266227a36db92cea8a45d5177d03e9a922a7bfb25762b7f 1.21kB / 1.21kB 0.7s done
+2026-Jul-13 14:04:52.974845
+#5 sha256:01bf363d61e6136ebd7dcaf74b303bd08ee8f849a04e2c0be5a8d03159b404f6 0B / 1.40kB 0.8s
+2026-Jul-13 14:04:52.974845
+#5 sha256:c75b9c33e8b0983941fe03793379bd5d137f641f92b4a94d1c8956d28ba77f65 0B / 20.25MB 0.8s
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:5b429a43b8dfa079c3ac95537bd88d5f1ac70e478c64f100b8ef6aa9c555ebc2
+2026-Jul-13 14:04:52.974845
+#5 sha256:01bf363d61e6136ebd7dcaf74b303bd08ee8f849a04e2c0be5a8d03159b404f6 1.40kB / 1.40kB 0.8s done
+2026-Jul-13 14:04:52.974845
+#5 sha256:c75b9c33e8b0983941fe03793379bd5d137f641f92b4a94d1c8956d28ba77f65 5.24MB / 20.25MB 0.9s
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:5b429a43b8dfa079c3ac95537bd88d5f1ac70e478c64f100b8ef6aa9c555ebc2 done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:967885d218c57d3ce2a4e906131fb25f59e6f56cce51d87dde7d74b0e7465675 done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:ab1fd90497517c799d4fb351bc1a7ae8b58e231345d4948ae8ac73c75b320b35 done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:ce42635eeddd348e8266227a36db92cea8a45d5177d03e9a922a7bfb25762b7f
+2026-Jul-13 14:04:52.974845
+#5 sha256:c75b9c33e8b0983941fe03793379bd5d137f641f92b4a94d1c8956d28ba77f65 20.25MB / 20.25MB 1.0s done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:ce42635eeddd348e8266227a36db92cea8a45d5177d03e9a922a7bfb25762b7f done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:01bf363d61e6136ebd7dcaf74b303bd08ee8f849a04e2c0be5a8d03159b404f6 done
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:c75b9c33e8b0983941fe03793379bd5d137f641f92b4a94d1c8956d28ba77f65
+2026-Jul-13 14:04:52.974845
+#5 extracting sha256:c75b9c33e8b0983941fe03793379bd5d137f641f92b4a94d1c8956d28ba77f65 0.5s done
+2026-Jul-13 14:04:52.974845
+#5 DONE 1.8s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#7 [builder 1/6] FROM docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293
+2026-Jul-13 14:04:52.974845
+#7 resolve docker.io/library/node:20-alpine@sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 0.0s done
+2026-Jul-13 14:04:52.974845
+#7 sha256:4feea04c154301db6f4a496efa397b3db96603b1c009c797cfdde77bea8b3287 43.23MB / 43.23MB 0.4s done
+2026-Jul-13 14:04:52.974845
+#7 sha256:b2cbbfe903b0821005780971ddc5892edcc4ce74c5a48d82e1d2b382edac3122 1.26MB / 1.26MB 0.4s done
+2026-Jul-13 14:04:52.974845
+#7 sha256:fff4e2c1b189bf87d63ad8bd07f7f4eb288d6f2b6a07a8bb44c60e8c075d2096 445B / 445B 0.3s done
+2026-Jul-13 14:04:52.974845
+#7 sha256:fb4cd12c85ee03686f6af5362a0b0d56d50c58a04632e6c0fb8363f609372293 7.67kB / 7.67kB done
+2026-Jul-13 14:04:52.974845
+#7 sha256:afdf98210b07b586eb71fa22ba2e432e058e4cd1304d31ed60888755b8c865fb 1.72kB / 1.72kB done
+2026-Jul-13 14:04:52.974845
+#7 sha256:11cedc39e663e7c5d5cb9cc77a461a0d2adc25537b94e6831a6108f09cb2001b 6.52kB / 6.52kB done
+2026-Jul-13 14:04:52.974845
+#7 extracting sha256:4feea04c154301db6f4a496efa397b3db96603b1c009c797cfdde77bea8b3287 1.2s
+2026-Jul-13 14:04:52.974845
+#7 extracting sha256:4feea04c154301db6f4a496efa397b3db96603b1c009c797cfdde77bea8b3287 1.7s done
+2026-Jul-13 14:04:52.974845
+#7 extracting sha256:b2cbbfe903b0821005780971ddc5892edcc4ce74c5a48d82e1d2b382edac3122
+2026-Jul-13 14:04:52.974845
+#7 extracting sha256:b2cbbfe903b0821005780971ddc5892edcc4ce74c5a48d82e1d2b382edac3122 0.0s done
+2026-Jul-13 14:04:52.974845
+#7 extracting sha256:fff4e2c1b189bf87d63ad8bd07f7f4eb288d6f2b6a07a8bb44c60e8c075d2096 done
+2026-Jul-13 14:04:52.974845
+#7 DONE 2.3s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#8 [builder 2/6] RUN corepack enable && corepack prepare pnpm@latest --activate
+2026-Jul-13 14:04:52.974845
+#8 0.517 Preparing pnpm@latest for immediate activation...
+2026-Jul-13 14:04:52.974845
+#8 DONE 1.3s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#9 [builder 3/6] WORKDIR /app
+2026-Jul-13 14:04:52.974845
+#9 DONE 0.0s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#10 [builder 4/6] COPY . .
+2026-Jul-13 14:04:52.974845
+#10 DONE 0.0s
+2026-Jul-13 14:04:52.974845
+2026-Jul-13 14:04:52.974845
+#11 [builder 5/6] RUN pnpm install --frozen-lockfile
+2026-Jul-13 14:04:52.974845
+#11 0.145 warn: This version of pnpm requires at least Node.js v22.13
+2026-Jul-13 14:04:52.974845
+#11 0.145 warn: The current version of Node.js is v20.20.2
+2026-Jul-13 14:04:52.974845
+#11 0.145 warn: Visit https://r.pnpm.io/comp to see the list of past pnpm versions with respective Node.js version support.
+2026-Jul-13 14:04:52.974845
+#11 0.474 node:<REDACTED>@workspace/covertcare-site build
+2026-Jul-13 14:04:52.974845
+12 |
+2026-Jul-13 14:04:52.974845
+--------------------
+2026-Jul-13 14:04:52.974845
+ERROR: failed to build: failed to solve: process "/bin/sh -c pnpm install --frozen-lockfile" did not complete successfully: exit code: 1
+2026-Jul-13 14:04:52.974845
+exit status 1
+2026-Jul-13 14:04:53.045168
+========================================
+2026-Jul-13 14:04:53.051871
+Deployment failed. Removing the new version of your application.
+2026-Jul-13 14:04:53.481004
+Gracefully shutting down build container: n4vyu2ututha5ojkc5xv8ghe
