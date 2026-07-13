@@ -1,28 +1,28 @@
-import { ReplitConnectors } from "@replit/connectors-sdk";
+import { Resend } from "resend";
 import { logger } from "./logger.js";
 
+// ── Resend client ──────────────────────────────────────────────────────────
+// Set RESEND_API_KEY in your environment (Coolify dashboard → Environment).
+// The server will still start without it, but email delivery will be skipped
+// and a warning logged on each submission.
+const apiKey = process.env.RESEND_API_KEY;
+const resend = apiKey ? new Resend(apiKey) : null;
+
 // ── Destination ────────────────────────────────────────────────────────────
-// Resend sandbox mode delivers only to the account owner's verified address.
-// Once covertcare.ir is verified as a sending domain, change this to
-// "aminboldy@gmail.com" (or "info@covertcare.ir") and update FROM_ADDRESS.
-const DESTINATION_EMAIL = "amin.delshad@gmail.com";
+// Submissions go here until an organisational inbox is ready.
+// Once covertcare.ir is live, change to "info@covertcare.ir" and update
+// FROM_ADDRESS below.
+const DESTINATION_EMAIL = "aminboldy@gmail.com";
 
 // ── Sending address ────────────────────────────────────────────────────────
-// "onboarding@resend.dev" is Resend's shared sandbox domain — works
-// immediately without DNS setup. Deliverability is fine for low-volume
-// institutional mail; Gmail may show "via resend.dev" in headers.
-//
-// Once covertcare.ir DNS is live, verify the domain in the Resend dashboard
-// and replace this line with:
-//   const FROM_ADDRESS = "CovertCare <forms@covertcare.ir>";
+// Requires covertcare.ir to be verified as a sending domain in Resend.
+// Until then, use "onboarding@resend.dev" (Resend's shared sandbox sender —
+// works immediately but shows "via resend.dev" in Gmail headers).
 const FROM_ADDRESS = "CovertCare <onboarding@resend.dev>";
 
-const connectors = new ReplitConnectors();
-
-// ── Shared HTML wrapper ────────────────────────────────────────────────────
+// ── Shared HTML helpers ────────────────────────────────────────────────────
 function row(label: string, value: string | null | undefined): string {
   if (!value) return "";
-  // Escape the value for safe HTML rendering
   const safe = value
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
@@ -51,7 +51,7 @@ function wrapHtml(title: string, rows: string): string {
     <div style="padding:20px 28px;background:#f7fafc;border-top:1px solid #edf2f7;">
       <p style="margin:0;font-size:12px;color:#718096;">
         Forwarded from covertcare.ir · Do not reply to this notification directly.<br/>
-        Routed to ${DESTINATION_EMAIL} as the current team inbox.
+        Routed to ${DESTINATION_EMAIL}.
       </p>
     </div>
   </div>
@@ -61,20 +61,20 @@ function wrapHtml(title: string, rows: string): string {
 
 // ── Low-level send — fire-and-forget, errors logged not thrown ─────────────
 async function sendEmail(subject: string, html: string): Promise<void> {
-  try {
-    const res = await connectors.proxy("resend", "/emails", {
-      method: "POST",
-      body: JSON.stringify({ from: FROM_ADDRESS, to: [DESTINATION_EMAIL], subject, html }),
-      headers: { "Content-Type": "application/json" },
-    });
-    if (!res.ok) {
-      const text = await res.text().catch(() => "(unreadable)");
-      logger.error({ status: res.status, body: text }, "Resend delivery failed");
-    } else {
-      logger.info({ subject }, "Email delivered via Resend");
-    }
-  } catch (err) {
-    logger.error({ err }, "Resend email threw an exception");
+  if (!resend) {
+    logger.warn({ subject }, "RESEND_API_KEY not set — email delivery skipped");
+    return;
+  }
+  const { error } = await resend.emails.send({
+    from: FROM_ADDRESS,
+    to: [DESTINATION_EMAIL],
+    subject,
+    html,
+  });
+  if (error) {
+    logger.error({ error, subject }, "Resend delivery failed");
+  } else {
+    logger.info({ subject }, "Email delivered via Resend");
   }
 }
 
@@ -121,7 +121,10 @@ export function sendPartnerInquiryEmail(data: {
     row("LinkedIn / profile", data.linkedinProfile) +
     row("Public programme page", data.publicProgramPage);
 
-  void sendEmail(`CovertCare Partner Inquiry — ${data.organization}`, wrapHtml("New Partner Inquiry", rows));
+  void sendEmail(
+    `CovertCare Partner Inquiry — ${data.organization}`,
+    wrapHtml("New Partner Inquiry", rows),
+  );
 }
 
 // ── Advisor interest ───────────────────────────────────────────────────────
@@ -151,7 +154,10 @@ export function sendAdvisorInterestEmail(data: {
     row("Conflict disclosure", data.conflictDisclosure) +
     row("Professional profile", data.professionalProfile);
 
-  void sendEmail(`CovertCare Advisor Interest — ${data.fullName}`, wrapHtml("New Advisor Interest", rows));
+  void sendEmail(
+    `CovertCare Advisor Interest — ${data.fullName}`,
+    wrapHtml("New Advisor Interest", rows),
+  );
 }
 
 // ── General contact ────────────────────────────────────────────────────────
@@ -169,5 +175,8 @@ export function sendGeneralContactEmail(data: {
     row("Inquiry type", data.inquiryType) +
     row("Message", data.message);
 
-  void sendEmail(`CovertCare Contact — ${data.inquiryType} from ${data.name}`, wrapHtml("New General Contact", rows));
+  void sendEmail(
+    `CovertCare Contact — ${data.inquiryType} from ${data.name}`,
+    wrapHtml("New General Contact", rows),
+  );
 }
