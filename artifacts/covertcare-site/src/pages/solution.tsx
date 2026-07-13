@@ -24,6 +24,17 @@ export default function Solution() {
         </div>
       </section>
 
+      {/* Field photo — context */}
+      <section className="relative overflow-hidden border-b border-border/40" style={{ height: "280px" }}>
+        <img
+          src="/images/vaccine-refugee.jpg"
+          alt="An International Medical Corps volunteer administers a COVID-19 vaccine to a Syrian refugee in Jordan"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
+        <p className="absolute bottom-3 right-4 text-foreground/40 text-xs">Photo: IMC / N. Bseiso — Jordan</p>
+      </section>
+
       <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="mb-16">

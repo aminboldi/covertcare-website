@@ -20,6 +20,24 @@ export default function About() {
         </div>
       </section>
 
+      {/* Field photo — community health worker */}
+      <section className="relative overflow-hidden border-b border-border/40" style={{ height: "280px" }}>
+        <img
+          src="/images/context-chw.jpg"
+          alt="Aisha, a community health worker in Galkacyo, Somalia"
+          className="w-full h-full object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-background/75 via-transparent to-transparent" />
+        <div className="absolute inset-0 flex items-center justify-end">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-right">
+            <p className="text-foreground/90 text-base font-medium max-w-xs ml-auto leading-relaxed drop-shadow-sm">
+              Community health workers are often the last link in the care chain
+            </p>
+          </div>
+        </div>
+        <p className="absolute bottom-3 left-4 text-foreground/30 text-xs">Photo: International Medical Corps / Somalia</p>
+      </section>
+
       <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl space-y-16">
           

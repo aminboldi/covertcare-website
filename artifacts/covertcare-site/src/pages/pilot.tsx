@@ -21,6 +21,24 @@ export default function Pilot() {
         </div>
       </section>
 
+      {/* Partnership photo */}
+      <section className="relative overflow-hidden border-b border-border/40" style={{ height: "280px" }}>
+        <img
+          src="/images/partnership.jpg"
+          alt="Medical Teams International and IOM mobile medical brigades operating in Ukraine"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/65 via-primary/20 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <p className="text-white/90 text-xl font-serif font-semibold max-w-sm leading-snug drop-shadow">
+              Institutional partnership, bounded scope, measurable outcome
+            </p>
+          </div>
+        </div>
+        <p className="absolute bottom-3 right-4 text-white/40 text-xs">Photo: Medical Teams International / Ukraine</p>
+      </section>
+
       <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           

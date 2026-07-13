@@ -132,6 +132,24 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Photo strip — field context */}
+      <section className="relative overflow-hidden border-b border-border/40" style={{ height: "340px" }}>
+        <img
+          src="/images/hero-chw.jpg"
+          alt="Community health worker conducting a training session in Mogadishu, Somalia"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/30 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+            <p className="text-white/90 text-xl sm:text-2xl font-serif font-semibold max-w-md leading-snug drop-shadow">
+              Where disrupted care systems meet trusted community relationships
+            </p>
+          </div>
+        </div>
+        <p className="absolute bottom-3 right-4 text-white/50 text-xs">Photo: International Medical Corps / Somalia</p>
+      </section>
+
       {/* S3 — Context Shift */}
       <section className="py-20 lg:py-28 bg-secondary/30 border-b border-border/40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">

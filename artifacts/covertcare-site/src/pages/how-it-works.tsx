@@ -32,6 +32,24 @@ export default function HowItWorks() {
         </div>
       </section>
 
+      {/* Field photo — rural clinic */}
+      <section className="relative overflow-hidden border-b border-border/40" style={{ height: "280px" }}>
+        <img
+          src="/images/rural-clinic.jpg"
+          alt="Healthcare workers administering vaccines at a rural community clinic"
+          className="w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <p className="text-foreground/90 text-base font-medium max-w-xs leading-relaxed drop-shadow-sm">
+              Qualified care delivered through trained field intermediaries
+            </p>
+          </div>
+        </div>
+        <p className="absolute bottom-3 right-4 text-foreground/30 text-xs">Photo: Magnific / rural community clinic</p>
+      </section>
+
       <section className="py-16 bg-secondary/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="mb-16">
