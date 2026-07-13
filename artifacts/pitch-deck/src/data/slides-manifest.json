@@ -1,0 +1,114 @@
+[
+  {
+    "id": "cc001111-0000-0000-0000-000000000001",
+    "position": 1,
+    "filepath": "src/pages/slides/Slide01Cover.tsx",
+    "title": "CovertCare",
+    "description": "Cover slide with hero image and primary tagline",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000002",
+    "position": 2,
+    "filepath": "src/pages/slides/Slide02Problem.tsx",
+    "title": "The Problem",
+    "description": "Three core gaps: fragmented channels, unnecessary data exposure, no disposition framework",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000003",
+    "position": 3,
+    "filepath": "src/pages/slides/Slide03Approaches.tsx",
+    "title": "Existing Approaches",
+    "description": "Informal channels vs what is missing — structured intake, governance, disposition, data minimization",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000004",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04ModelDivider.tsx",
+    "title": "The CovertCare Model",
+    "description": "Section divider: partner-operated, clinician-governed, minimum-data",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000005",
+    "position": 5,
+    "filepath": "src/pages/slides/Slide05Workflow.tsx",
+    "title": "Care Relay Workflow",
+    "description": "SVG diagram of the four-node care relay: Field Intermediary, CovertCare Relay, Qualified Clinician, Disposition",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000006",
+    "position": 6,
+    "filepath": "src/pages/slides/Slide06StakeholderRoles.tsx",
+    "title": "Stakeholder Roles",
+    "description": "Three-column layout: Host Organization, Trained Intermediary, Qualified Clinician",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000007",
+    "position": 7,
+    "filepath": "src/pages/slides/Slide07ExplicitLimits.tsx",
+    "title": "Explicit Limits",
+    "description": "Five structural boundary statements: not an emergency service, not an anonymous marketplace, no AI diagnosis, no anonymity claim, no deployment without gates",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000008",
+    "position": 8,
+    "filepath": "src/pages/slides/Slide08PilotDivider.tsx",
+    "title": "The Pilot Offer",
+    "description": "Section divider: eight weeks, one partner, governed scope, clear stop criteria",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000009",
+    "position": 9,
+    "filepath": "src/pages/slides/Slide09PilotStructure.tsx",
+    "title": "Eight-Week Pilot Structure",
+    "description": "Four-phase timeline: Discovery, Simulation, Supervised Operation, Evaluation",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000010",
+    "position": 10,
+    "filepath": "src/pages/slides/Slide10PilotCriteria.tsx",
+    "title": "Partner Criteria",
+    "description": "Two-column: what the host organization brings vs what CovertCare provides",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000011",
+    "position": 11,
+    "filepath": "src/pages/slides/Slide11Measurement.tsx",
+    "title": "What We Measure",
+    "description": "2x2 grid: Response Timeliness, Referral Clarity, Data Minimization, Safety Incidents",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000012",
+    "position": 12,
+    "filepath": "src/pages/slides/Slide12SafetyGates.tsx",
+    "title": "Safety Gates",
+    "description": "Four required gates (Clinical, Legal, Security, Partner) and four stop criteria",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000013",
+    "position": 13,
+    "filepath": "src/pages/slides/Slide13Sustainability.tsx",
+    "title": "Sustainability Model",
+    "description": "Three pillars: institutional licensing, grant funding, open learning — no data monetization",
+    "speakerNotes": ""
+  },
+  {
+    "id": "cc001111-0000-0000-0000-000000000014",
+    "position": 14,
+    "filepath": "src/pages/slides/Slide14Contact.tsx",
+    "title": "Two Ways to Engage",
+    "description": "Closing slide: partner inquiry path and advisory interest path, contact note",
+    "speakerNotes": ""
+  }
+]
