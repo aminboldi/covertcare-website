@@ -27,15 +27,15 @@ export default function About() {
           alt="Aisha, a community health worker in Galkacyo, Somalia"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-background/75 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-l from-primary/90 via-primary/55 to-primary/10" />
         <div className="absolute inset-0 flex items-center justify-end">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-right">
-            <p className="text-foreground/90 text-base font-medium max-w-xs ml-auto leading-relaxed drop-shadow-sm">
+            <p className="text-white text-base font-medium max-w-xs ml-auto leading-relaxed" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.45)" }}>
               Community health workers are often the last link in the care chain
             </p>
           </div>
         </div>
-        <p className="absolute bottom-3 left-4 text-foreground/30 text-xs">Photo: International Medical Corps / Somalia</p>
+        <p className="absolute bottom-3 left-4 text-white/50 text-xs" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.6)" }}>Photo: International Medical Corps / Somalia</p>
       </section>
 
       <section className="py-16 bg-secondary/20">

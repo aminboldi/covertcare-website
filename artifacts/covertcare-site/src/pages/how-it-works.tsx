@@ -39,15 +39,15 @@ export default function HowItWorks() {
           alt="Healthcare workers administering vaccines at a rural community clinic"
           className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/55 to-primary/10" />
         <div className="absolute inset-0 flex items-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <p className="text-foreground/90 text-base font-medium max-w-xs leading-relaxed drop-shadow-sm">
+            <p className="text-white text-base font-medium max-w-xs leading-relaxed" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.45)" }}>
               Qualified care delivered through trained field intermediaries
             </p>
           </div>
         </div>
-        <p className="absolute bottom-3 right-4 text-foreground/30 text-xs">Photo: Magnific / rural community clinic</p>
+        <p className="absolute bottom-3 right-4 text-white/50 text-xs" style={{ textShadow: "0 1px 3px rgba(0,0,0,0.6)" }}>Photo: Magnific / rural community clinic</p>
       </section>
 
       <section className="py-16 bg-secondary/20">
