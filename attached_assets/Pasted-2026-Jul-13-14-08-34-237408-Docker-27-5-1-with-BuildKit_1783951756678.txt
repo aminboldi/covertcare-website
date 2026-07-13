@@ -1,0 +1,175 @@
+2026-Jul-13 14:08:34.237408 Docker 27.5.1 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Jul-13 14:08:34.244533 Starting deployment of aminboldi/covertcare-website:main to localhost.
+2026-Jul-13 14:08:34.530925 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.14
+2026-Jul-13 14:08:35.676821 ----------------------------------------
+2026-Jul-13 14:08:35.683388 Importing aminboldi/covertcare-website:main (commit sha f08cdee3cea8654dd2814ed10b6281dc5855197e) to /artifacts/dapp3eofqmd9svk3r0j262f3.
+2026-Jul-13 14:08:37.843896 Image not found (dh7ychb3t4haxwpnec26np2f:f08cdee3cea8654dd2814ed10b6281dc5855197e). Building new image.
+2026-Jul-13 14:08:39.367176 ----------------------------------------
+2026-Jul-13 14:08:39.373459 Building docker image started.
+2026-Jul-13 14:08:39.378805 To check the current progress, click on Show Debug Logs.
+2026-Jul-13 14:08:56.072081 ========================================
+2026-Jul-13 14:08:56.079037 Deployment failed: Command execution failed (exit code 1): docker exec dapp3eofqmd9svk3r0j262f3 bash -c 'bash /artifacts/build.sh'
+2026-Jul-13 14:08:56.079037 Error: #0 building with "default" instance using docker driver
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #1 [internal] load build definition from Dockerfile.site
+2026-Jul-13 14:08:56.079037 #1 transferring dockerfile: 1.28kB done
+2026-Jul-13 14:08:56.079037 #1 DONE 0.0s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #2 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jul-13 14:08:56.079037 #2 ...
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #3 [internal] load metadata for docker.io/library/nginx:alpine
+2026-Jul-13 14:08:56.079037 #3 DONE 0.4s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #2 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jul-13 14:08:56.079037 #2 DONE 0.9s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #4 [internal] load .dockerignore
+2026-Jul-13 14:08:56.079037 #4 transferring context: 2B done
+2026-Jul-13 14:08:56.079037 #4 DONE 0.0s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #5 [stage-1 1/3] FROM docker.io/library/nginx:alpine@sha256:54f2a904c251d5a34adf545a72d32515a15e08418dae0266e23be2e18c66fefa
+2026-Jul-13 14:08:56.079037 #5 CACHED
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #6 [internal] load build context
+2026-Jul-13 14:08:56.079037 #6 transferring context: 1.96MB 0.1s done
+2026-Jul-13 14:08:56.079037 #6 DONE 0.1s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #7 [builder 1/6] FROM docker.io/library/node:22-alpine@sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2
+2026-Jul-13 14:08:56.079037 #7 resolve docker.io/library/node:22-alpine@sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2 0.0s done
+2026-Jul-13 14:08:56.079037 #7 sha256:bd168dc5d9d77ba5687dc7a31cc0f507c35b66c1d6af5f910154d3881df7c0ee 6.52kB / 6.52kB done
+2026-Jul-13 14:08:56.079037 #7 sha256:3f4c164634d251a8b256151a9e1c1d3e5c5b21f1974f00a213875e66e3fa0801 0B / 52.31MB 0.1s
+2026-Jul-13 14:08:56.079037 #7 sha256:1d4d101ceaad39fb56dcac0bb6cc291e6cdec3b711786f0c82b050b5b5b85690 0B / 1.26MB 0.1s
+2026-Jul-13 14:08:56.079037 #7 sha256:d10ff586f6bdbdd6000a70a914e56bf05bedc78de3311d08a953643982d84e23 0B / 446B 0.1s
+2026-Jul-13 14:08:56.079037 #7 sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2 6.41kB / 6.41kB done
+2026-Jul-13 14:08:56.079037 #7 sha256:b74031e546d7f4faf561d797ac1b76beccac856a042815ca77db4fd047581605 1.72kB / 1.72kB done
+2026-Jul-13 14:08:56.079037 #7 sha256:3f4c164634d251a8b256151a9e1c1d3e5c5b21f1974f00a213875e66e3fa0801 37.75MB / 52.31MB 0.3s
+2026-Jul-13 14:08:56.079037 #7 sha256:1d4d101ceaad39fb56dcac0bb6cc291e6cdec3b711786f0c82b050b5b5b85690 1.26MB / 1.26MB 0.3s done
+2026-Jul-13 14:08:56.079037 #7 sha256:3f4c164634d251a8b256151a9e1c1d3e5c5b21f1974f00a213875e66e3fa0801 52.31MB / 52.31MB 0.4s done
+2026-Jul-13 14:08:56.079037 #7 sha256:d10ff586f6bdbdd6000a70a914e56bf05bedc78de3311d08a953643982d84e23 446B / 446B 0.4s done
+2026-Jul-13 14:08:56.079037 #7 extracting sha256:3f4c164634d251a8b256151a9e1c1d3e5c5b21f1974f00a213875e66e3fa0801
+2026-Jul-13 14:08:56.079037 #7 extracting sha256:3f4c164634d251a8b256151a9e1c1d3e5c5b21f1974f00a213875e66e3fa0801 1.5s done
+2026-Jul-13 14:08:56.079037 #7 extracting sha256:1d4d101ceaad39fb56dcac0bb6cc291e6cdec3b711786f0c82b050b5b5b85690
+2026-Jul-13 14:08:56.079037 #7 extracting sha256:1d4d101ceaad39fb56dcac0bb6cc291e6cdec3b711786f0c82b050b5b5b85690 0.0s done
+2026-Jul-13 14:08:56.079037 #7 extracting sha256:d10ff586f6bdbdd6000a70a914e56bf05bedc78de3311d08a953643982d84e23 done
+2026-Jul-13 14:08:56.079037 #7 DONE 2.1s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #8 [builder 2/6] RUN corepack enable && corepack prepare pnpm@10.26.1 --activate
+2026-Jul-13 14:08:56.079037 #8 0.213 Preparing pnpm@10.26.1 for immediate activation...
+2026-Jul-13 14:08:56.079037 #8 DONE 1.5s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #9 [builder 3/6] WORKDIR /app
+2026-Jul-13 14:08:56.079037 #9 DONE 0.0s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #10 [builder 4/6] COPY . .
+2026-Jul-13 14:08:56.079037 #10 DONE 0.1s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #11 [builder 5/6] RUN pnpm install --frozen-lockfile
+2026-Jul-13 14:08:56.079037 #11 0.657 Scope: all 10 workspace projects
+2026-Jul-13 14:08:56.079037 #11 0.825 Lockfile is up to date, resolution step is skipped
+2026-Jul-13 14:08:56.079037 #11 0.888 Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-Jul-13 14:08:56.079037 #11 0.971 Packages: +479
+2026-Jul-13 14:08:56.079037 #11 0.971 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-Jul-13 14:08:56.079037 #11 1.136
+2026-Jul-13 14:08:56.079037 #11 1.136 ╭───────────────────────────────────────────────╮
+2026-Jul-13 14:08:56.079037 #11 1.136 │ │
+2026-Jul-13 14:08:56.079037 #11 1.136 │ Update available! 10.26.1 → 11.12.0. │
+2026-Jul-13 14:08:56.079037 #11 1.136 │ Changelog: https://pnpm.io/v/11.12.0 │
+2026-Jul-13 14:08:56.079037 #11 1.136 │ To update, run:<REDACTED>@11.12.0 │
+2026-Jul-13 14:08:56.079037 #11 1.136 │ │
+2026-Jul-13 14:08:56.079037 #11 1.136 ╰───────────────────────────────────────────────╯
+2026-Jul-13 14:08:56.079037 #11 1.136
+2026-Jul-13 14:08:56.079037 #11 1.891 Progress: resolved 479, reused 0, downloaded 36, added 8
+2026-Jul-13 14:08:56.079037 #11 2.892 Progress: resolved 479, reused 0, downloaded 176, added 111
+2026-Jul-13 14:08:56.079037 #11 3.893 Progress: resolved 479, reused 0, downloaded 261, added 157
+2026-Jul-13 14:08:56.079037 #11 4.894 Progress: resolved 479, reused 0, downloaded 275, added 161
+2026-Jul-13 14:08:56.079037 #11 5.903 Progress: resolved 479, reused 0, downloaded 279, added 165
+2026-Jul-13 14:08:56.079037 #11 6.904 Progress: resolved 479, reused 0, downloaded 323, added 177
+2026-Jul-13 14:08:56.079037 #11 7.905 Progress: resolved 479, reused 0, downloaded 411, added 226
+2026-Jul-13 14:08:56.079037 #11 8.908 Progress: resolved 479, reused 0, downloaded 478, added 290
+2026-Jul-13 14:08:56.079037 #11 9.210 Progress: resolved 479, reused 0, downloaded 478, added 479, done
+2026-Jul-13 14:08:56.079037 #11 9.533 .../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+2026-Jul-13 14:08:56.079037 #11 9.622 .../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+2026-Jul-13 14:08:56.079037 #11 9.979
+2026-Jul-13 14:08:56.079037 #11 9.979 dependencies:
+2026-Jul-13 14:08:56.079037 #11 9.979 + @replit/connectors-sdk 0.4.1
+2026-Jul-13 14:08:56.079037 #11 9.979
+2026-Jul-13 14:08:56.079037 #11 9.979 devDependencies:
+2026-Jul-13 14:08:56.079037 #11 9.979 + prettier 3.9.4
+2026-Jul-13 14:08:56.079037 #11 9.979 + typescript 5.9.3
+2026-Jul-13 14:08:56.079037 #11 9.979
+2026-Jul-13 14:08:56.079037 #11 10.04 . preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+2026-Jul-13 14:08:56.079037 #11 10.05 . preinstall: Done
+2026-Jul-13 14:08:56.079037 #11 10.20 Done in 10s using pnpm v10.26.1
+2026-Jul-13 14:08:56.079037 #11 DONE 10.5s
+2026-Jul-13 14:08:56.079037
+2026-Jul-13 14:08:56.079037 #12 [builder 6/6] RUN pnpm --filter @workspace/covertcare-site build
+2026-Jul-13 14:08:56.079037 #12 0.608
+2026-Jul-13 14:08:56.079037 #12 0.608 > @workspace/covertcare-site@0.0.0 build /app/artifacts/covertcare-site
+2026-Jul-13 14:08:56.079037 #12 0.608 > vite build --config vite.config.ts
+2026-Jul-13 14:08:56.079037 #12 0.608
+2026-Jul-13 14:08:56.079037 #12 0.843 /app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js:121
+2026-Jul-13 14:08:56.079037 #12 0.843 throw new Error(
+2026-Jul-13 14:08:56.079037 #12 0.843 ^
+2026-Jul-13 14:08:56.079037 #12 0.843
+2026-Jul-13 14:08:56.079037 #12 0.843 Error: Cannot find module @rollup/rollup-linux-x64-musl. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
+2026-Jul-13 14:08:56.079037 #12 0.843 at requireWithFriendlyError (/app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js:<REDACTED>@4.62.2/node_modules/rollup/dist/native.js:130:76)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Module._compile (node:internal/modules/cjs/loader:1781:14)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Object..js (node:internal/modules/cjs/loader:1913:10)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Module.load (node:internal/modules/cjs/loader:1505:32)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Function._load (node:internal/modules/cjs/loader:1309:12)
+2026-Jul-13 14:08:56.079037 #12 0.843 at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-Jul-13 14:08:56.079037 #12 0.843 at loadCJSModuleWithModuleLoad (node:internal/modules/esm/translators:335:3)
+2026-Jul-13 14:08:56.079037 #12 0.843 at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:235:7)
+2026-Jul-13 14:08:56.079037 #12 0.843 at ModuleJob.run (node:internal/modules/esm/module_job:343:25) {
+2026-Jul-13 14:08:56.079037 #12 0.843 [cause]: Error: Cannot find module '@rollup/rollup-linux-x64-musl'
+2026-Jul-13 14:08:56.079037 #12 0.843 Require stack:
+2026-Jul-13 14:08:56.079037 #12 0.843 - /app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js
+2026-Jul-13 14:08:56.079037 #12 0.843 at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)
+2026-Jul-13 14:08:56.079037 #12 0.843 at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)
+2026-Jul-13 14:08:56.079037 #12 0.843 at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Function._load (node:internal/modules/cjs/loader:1216:25)
+2026-Jul-13 14:08:56.079037 #12 0.843 at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Module.require (node:internal/modules/cjs/loader:1527:12)
+2026-Jul-13 14:08:56.079037 #12 0.843 at require (node:internal/modules/helpers:147:16)
+2026-Jul-13 14:08:56.079037 #12 0.843 at requireWithFriendlyError (/app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js:103:10)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Object.<anonymous> (/app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js:130:76)
+2026-Jul-13 14:08:56.079037 #12 0.843 at Module._compile (node:internal/modules/cjs/loader:1781:14) {
+2026-Jul-13 14:08:56.079037 #12 0.843 code: 'MODULE_NOT_FOUND',
+2026-Jul-13 14:08:56.079037 #12 0.843 requireStack: [
+2026-Jul-13 14:08:56.079037 #12 0.843 '/app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js'
+2026-Jul-13 14:08:56.079037 #12 0.843 ]
+2026-Jul-13 14:08:56.079037 #12 0.843 }
+2026-Jul-13 14:08:56.079037 #12 0.843 }
+2026-Jul-13 14:08:56.079037 #12 0.843
+2026-Jul-13 14:08:56.079037 #12 0.843 Node.js v22.23.1
+2026-Jul-13 14:08:56.079037 #12 0.879 /app/artifacts/covertcare-site:
+2026-Jul-13 14:08:56.079037 #12 0.879 ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL @workspace/covertcare-site@0.0.0 build: `vite build --config vite.config.ts`
+2026-Jul-13 14:08:56.079037 #12 0.879 Exit status 1
+2026-Jul-13 14:08:56.079037 #12 ERROR: process "/bin/sh -c pnpm --filter @workspace/covertcare-site build" did not complete successfully: exit code: 1
+2026-Jul-13 14:08:56.079037 ------
+2026-Jul-13 14:08:56.079037 > [builder 6/6] RUN pnpm --filter @workspace/covertcare-site build:
+2026-Jul-13 14:08:56.079037 0.843 requireStack: [
+2026-Jul-13 14:08:56.079037 0.843 '/app/node_modules/.pnpm/rollup@4.62.2/node_modules/rollup/dist/native.js'
+2026-Jul-13 14:08:56.079037 0.843 ]
+2026-Jul-13 14:08:56.079037 0.843 }
+2026-Jul-13 14:08:56.079037 0.843 }
+2026-Jul-13 14:08:56.079037 0.843
+2026-Jul-13 14:08:56.079037 0.843 Node.js v22.23.1
+2026-Jul-13 14:08:56.079037 0.879 /app/artifacts/covertcare-site:
+2026-Jul-13 14:08:56.079037 0.879 ERR_PNPM_RECURSIVE_RUN_FIRST_FAIL @workspace/covertcare-site@0.0.0 build: `vite build --config vite.config.ts`
+2026-Jul-13 14:08:56.079037 0.879 Exit status 1
+2026-Jul-13 14:08:56.079037 ------
+2026-Jul-13 14:08:56.079037 Dockerfile.site:11
+2026-Jul-13 14:08:56.079037 --------------------
+2026-Jul-13 14:08:56.079037 9 | COPY . .
+2026-Jul-13 14:08:56.079037 10 | RUN pnpm install --frozen-lockfile
+2026-Jul-13 14:08:56.079037 11 | >>> RUN pnpm --filter @workspace/covertcare-site build
+2026-Jul-13 14:08:56.079037 12 |
+2026-Jul-13 14:08:56.079037 13 | # ── Serve stage ───────────────────────────────────────────────────────────
+2026-Jul-13 14:08:56.079037 --------------------
+2026-Jul-13 14:08:56.079037 ERROR: failed to build: failed to solve: process "/bin/sh -c pnpm --filter @workspace/covertcare-site build" did not complete successfully: exit code: 1
+2026-Jul-13 14:08:56.079037 exit status 1
+2026-Jul-13 14:08:56.141602 ========================================
+2026-Jul-13 14:08:56.147589 Deployment failed. Removing the new version of your application.
+2026-Jul-13 14:08:56.547608 Gracefully shutting down build container: dapp3eofqmd9svk3r0j262f3
