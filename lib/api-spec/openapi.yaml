@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: contact
+    description: Contact form submissions
 paths:
   /healthz:
     get:
@@ -24,6 +26,96 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /contact/partner:
+    post:
+      operationId: submitPartnerInquiry
+      tags: [contact]
+      summary: Submit a host/design partner inquiry
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PartnerInquiryInput"
+      responses:
+        "200":
+          description: Inquiry received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactSuccess"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactError"
+        "429":
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactError"
+  /contact/advisor:
+    post:
+      operationId: submitAdvisorInterest
+      tags: [contact]
+      summary: Submit expert advisory interest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AdvisorInterestInput"
+      responses:
+        "200":
+          description: Interest received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactSuccess"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactError"
+        "429":
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactError"
+  /contact/general:
+    post:
+      operationId: submitGeneralContact
+      tags: [contact]
+      summary: Submit a general contact message
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/GeneralContactInput"
+      responses:
+        "200":
+          description: Message received
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactSuccess"
+        "400":
+          description: Validation error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactError"
+        "429":
+          description: Too many requests
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContactError"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +125,222 @@ components:
           type: string
       required:
         - status
-
+    ContactSuccess:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        message:
+          type: string
+      required:
+        - ok
+        - message
+    ContactError:
+      type: object
+      properties:
+        ok:
+          type: boolean
+        error:
+          type: string
+      required:
+        - ok
+        - error
+    PartnerInquiryInput:
+      type: object
+      required:
+        - fullName
+        - workEmail
+        - organization
+        - role
+        - organizationType
+        - country
+        - inquiryType
+        - workflowChallenge
+        - hasClinicalOwner
+        - hasIntermediaries
+        - hasReferralPathway
+        - caseVolumeBand
+        - preferredNextStep
+        - consentGiven
+        - noSensitiveDataConfirmed
+        - submittedAt
+      properties:
+        fullName:
+          type: string
+          minLength: 1
+          maxLength: 200
+        workEmail:
+          type: string
+          minLength: 5
+          maxLength: 254
+        organization:
+          type: string
+          minLength: 1
+          maxLength: 300
+        role:
+          type: string
+          minLength: 1
+          maxLength: 200
+        organizationType:
+          type: string
+          minLength: 1
+          maxLength: 200
+        country:
+          type: string
+          minLength: 1
+          maxLength: 100
+        organizationWebsite:
+          type: ["string", "null"]
+          maxLength: 500
+        inquiryType:
+          type: string
+          enum: [discovery, pilot, institutional_partnership]
+        workflowChallenge:
+          type: string
+          minLength: 10
+          maxLength: 2000
+        hasClinicalOwner:
+          type: string
+          enum: [yes, no, in_discussion]
+        hasIntermediaries:
+          type: string
+          enum: [yes, no, in_discussion]
+        hasReferralPathway:
+          type: string
+          enum: [yes, no, unclear]
+        caseVolumeBand:
+          type: string
+          enum: [fewer_than_10, 10_to_49, 50_to_199, 200_plus, unknown]
+        preferredNextStep:
+          type: string
+          minLength: 1
+          maxLength: 500
+        linkedinProfile:
+          type: ["string", "null"]
+          maxLength: 500
+        publicProgramPage:
+          type: ["string", "null"]
+          maxLength: 500
+        targetPilotTiming:
+          type: ["string", "null"]
+          maxLength: 200
+        fundingStatus:
+          type: ["string", "null"]
+          enum: [funded, seeking_sponsor, internal_budget_possible, unknown, null]
+        howHeardAbout:
+          type: ["string", "null"]
+          maxLength: 500
+        consentGiven:
+          type: boolean
+        noSensitiveDataConfirmed:
+          type: boolean
+        submittedAt:
+          type: string
+        honeypot:
+          type: ["string", "null"]
+          description: Must be empty — bot trap field
+    AdvisorInterestInput:
+      type: object
+      required:
+        - fullName
+        - professionalEmail
+        - currentRole
+        - organization
+        - expertiseArea
+        - country
+        - experienceSummary
+        - availabilityBand
+        - interestType
+        - conflictDisclosure
+        - consentGiven
+        - noSensitiveDataConfirmed
+        - submittedAt
+      properties:
+        fullName:
+          type: string
+          minLength: 1
+          maxLength: 200
+        professionalEmail:
+          type: string
+          minLength: 5
+          maxLength: 254
+        currentRole:
+          type: string
+          minLength: 1
+          maxLength: 200
+        organization:
+          type: string
+          minLength: 1
+          maxLength: 300
+        expertiseArea:
+          type: string
+          minLength: 1
+          maxLength: 200
+        country:
+          type: string
+          minLength: 1
+          maxLength: 100
+        experienceSummary:
+          type: string
+          minLength: 10
+          maxLength: 2000
+        professionalProfile:
+          type: ["string", "null"]
+          maxLength: 500
+        availabilityBand:
+          type: string
+          minLength: 1
+          maxLength: 200
+        interestType:
+          type: string
+          enum: [pro_bono_advisory, paid_advisory, research_collaboration, institutional_introduction]
+        conflictDisclosure:
+          type: string
+          maxLength: 1000
+        consentGiven:
+          type: boolean
+        noSensitiveDataConfirmed:
+          type: boolean
+        submittedAt:
+          type: string
+        honeypot:
+          type: ["string", "null"]
+          description: Must be empty — bot trap field
+    GeneralContactInput:
+      type: object
+      required:
+        - name
+        - workEmail
+        - inquiryType
+        - message
+        - consentGiven
+        - noSensitiveDataConfirmed
+        - submittedAt
+      properties:
+        name:
+          type: string
+          minLength: 1
+          maxLength: 200
+        workEmail:
+          type: string
+          minLength: 5
+          maxLength: 254
+        organization:
+          type: ["string", "null"]
+          maxLength: 300
+        inquiryType:
+          type: string
+          enum: [host_partner, pilot_sponsor, accelerator, clinical_advisor, security_advisor, legal_advisor, evaluation_partner, technology_partner, media, general]
+        message:
+          type: string
+          minLength: 10
+          maxLength: 2000
+        consentGiven:
+          type: boolean
+        noSensitiveDataConfirmed:
+          type: boolean
+        submittedAt:
+          type: string
+        honeypot:
+          type: ["string", "null"]
+          description: Must be empty — bot trap field
