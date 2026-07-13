@@ -1,0 +1,18 @@
+# ── Build stage ───────────────────────────────────────────────────────────
+FROM node:20-alpine AS builder
+RUN corepack enable && corepack prepare pnpm@latest --activate
+WORKDIR /app
+COPY . .
+RUN pnpm install --frozen-lockfile
+RUN pnpm --filter @workspace/api-server build
+
+# ── Run stage ─────────────────────────────────────────────────────────────
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/artifacts/api-server/dist ./dist
+COPY --from=builder /app/artifacts/api-server/package.json ./package.json
+# Install production dependencies only
+RUN corepack enable && corepack prepare pnpm@latest --activate \
+ && pnpm install --prod --frozen-lockfile --ignore-scripts
+EXPOSE 8080
+CMD ["node", "--enable-source-maps", "./dist/index.mjs"]
