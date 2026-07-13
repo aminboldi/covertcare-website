@@ -12,3 +12,15 @@ id = "Q8sgMyU5AwRyQjQBGU9dr"
 uri = "file://.local/outputs/CovertCare-Partner-Pitch-Deck.pdf"
 type = "pdf"
 title = "CovertCare Partner Pitch Deck (PDF)"
+
+[[outputs]]
+id = "PjFOu0UZjTeexZ7jDCHgM"
+uri = "file://attached_assets/logo-variant-a.png"
+type = "image"
+title = "Variant A — Shield + Cross"
+
+[[outputs]]
+id = "43F3cB5aX5BCHtU6ybU9t"
+uri = "file://attached_assets/logo-variant-b.png"
+type = "image"
+title = "Variant B — Arc Embrace + Signal"
