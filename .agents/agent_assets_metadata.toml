@@ -1,0 +1,14 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "4Fj6cSrfvosH3n1FiFABL"
+uri = "file://.local/outputs/CovertCare-Partner-Pitch-Deck.pptx"
+type = "slides"
+title = "CovertCare Partner Pitch Deck (PPTX)"
+
+[[outputs]]
+id = "Q8sgMyU5AwRyQjQBGU9dr"
+uri = "file://.local/outputs/CovertCare-Partner-Pitch-Deck.pdf"
+type = "pdf"
+title = "CovertCare Partner Pitch Deck (PDF)"
