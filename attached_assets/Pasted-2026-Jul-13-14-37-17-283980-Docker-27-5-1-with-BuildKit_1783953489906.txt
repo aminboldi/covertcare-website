@@ -1,0 +1,140 @@
+2026-Jul-13 14:37:17.283980 Docker 27.5.1 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Jul-13 14:37:17.292272 Starting deployment of aminboldi/covertcare-website:main to localhost.
+2026-Jul-13 14:37:17.584770 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.14
+2026-Jul-13 14:37:18.739982 ----------------------------------------
+2026-Jul-13 14:37:18.745990 Importing aminboldi/covertcare-website:main (commit sha 4916446c5545fe028c90c28bd0934eff31e13f47) to /artifacts/yfj225utjfmfurr5ybolg1rr.
+2026-Jul-13 14:37:20.880338 Image not found (fhql4r1mvltus7uqpqcqhnj4:4916446c5545fe028c90c28bd0934eff31e13f47). Building new image.
+2026-Jul-13 14:37:22.376070 ----------------------------------------
+2026-Jul-13 14:37:22.383866 Building docker image started.
+2026-Jul-13 14:37:22.391226 To check the current progress, click on Show Debug Logs.
+2026-Jul-13 14:37:39.279071 ========================================
+2026-Jul-13 14:37:39.284677 Deployment failed: Command execution failed (exit code 1): docker exec yfj225utjfmfurr5ybolg1rr bash -c 'bash /artifacts/build.sh'
+2026-Jul-13 14:37:39.284677 Error: #0 building with "default" instance using docker driver
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #1 [internal] load build definition from Dockerfile.api
+2026-Jul-13 14:37:39.284677 #1 transferring dockerfile: 1.46kB done
+2026-Jul-13 14:37:39.284677 #1 DONE 0.0s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #2 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jul-13 14:37:39.284677 #2 ...
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #3 [internal] load metadata for docker.io/library/node:22
+2026-Jul-13 14:37:39.284677 #3 DONE 0.6s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #2 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jul-13 14:37:39.284677 #2 DONE 0.6s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #4 [internal] load .dockerignore
+2026-Jul-13 14:37:39.284677 #4 transferring context: 2B done
+2026-Jul-13 14:37:39.284677 #4 DONE 0.0s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #5 [stage-1 1/5] FROM docker.io/library/node:22-alpine@sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2
+2026-Jul-13 14:37:39.284677 #5 CACHED
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #6 [builder 1/6] FROM docker.io/library/node:22@sha256:a25c9934ff6382cd4f08b6bc26c82bf4ea69b1e6f8dabfb2ead457374127c365
+2026-Jul-13 14:37:39.284677 #6 CACHED
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #7 [stage-1 2/5] WORKDIR /app
+2026-Jul-13 14:37:39.284677 #7 DONE 0.1s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #8 [internal] load build context
+2026-Jul-13 14:37:39.284677 #8 transferring context: 5.55MB 0.1s done
+2026-Jul-13 14:37:39.284677 #8 DONE 0.2s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #9 [builder 2/6] RUN corepack enable && corepack prepare pnpm@10.26.1 --activate
+2026-Jul-13 14:37:39.284677 #9 0.210 Preparing pnpm@10.26.1 for immediate activation...
+2026-Jul-13 14:37:39.284677 #9 DONE 1.6s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #10 [builder 3/6] WORKDIR /app
+2026-Jul-13 14:37:39.284677 #10 DONE 0.0s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #11 [builder 4/6] COPY . .
+2026-Jul-13 14:37:39.284677 #11 DONE 0.1s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #12 [builder 5/6] RUN pnpm install --frozen-lockfile
+2026-Jul-13 14:37:39.284677 #12 0.698 Scope: all 10 workspace projects
+2026-Jul-13 14:37:39.284677 #12 0.892 Lockfile is up to date, resolution step is skipped
+2026-Jul-13 14:37:39.284677 #12 0.960 Progress: resolved 1, reused 0, downloaded 0, added 0
+2026-Jul-13 14:37:39.284677 #12 1.035 Packages: +480
+2026-Jul-13 14:37:39.284677 #12 1.035 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2026-Jul-13 14:37:39.284677 #12 1.191
+2026-Jul-13 14:37:39.284677 #12 1.191 ╭───────────────────────────────────────────────╮
+2026-Jul-13 14:37:39.284677 #12 1.191 │ │
+2026-Jul-13 14:37:39.284677 #12 1.191 │ Update available! 10.26.1 → 11.12.0. │
+2026-Jul-13 14:37:39.284677 #12 1.191 │ Changelog: https://pnpm.io/v/11.12.0 │
+2026-Jul-13 14:37:39.284677 #12 1.191 │ To update, run:<REDACTED>@11.12.0 │
+2026-Jul-13 14:37:39.284677 #12 1.191 │ │
+2026-Jul-13 14:37:39.284677 #12 1.191 ╰───────────────────────────────────────────────╯
+2026-Jul-13 14:37:39.284677 #12 1.191
+2026-Jul-13 14:37:39.284677 #12 1.965 Progress: resolved 480, reused 0, downloaded 31, added 4
+2026-Jul-13 14:37:39.284677 #12 2.966 Progress: resolved 480, reused 0, downloaded 175, added 75
+2026-Jul-13 14:37:39.284677 #12 3.969 Progress: resolved 480, reused 0, downloaded 280, added 129
+2026-Jul-13 14:37:39.284677 #12 4.970 Progress: resolved 480, reused 0, downloaded 289, added 132
+2026-Jul-13 14:37:39.284677 #12 5.972 Progress: resolved 480, reused 0, downloaded 293, added 132
+2026-Jul-13 14:37:39.284677 #12 6.972 Progress: resolved 480, reused 0, downloaded 333, added 145
+2026-Jul-13 14:37:39.284677 #12 7.974 Progress: resolved 480, reused 0, downloaded 419, added 203
+2026-Jul-13 14:37:39.284677 #12 8.977 Progress: resolved 480, reused 0, downloaded 480, added 292
+2026-Jul-13 14:37:39.284677 #12 9.468 Progress: resolved 480, reused 0, downloaded 480, added 480, done
+2026-Jul-13 14:37:39.284677 #12 9.673 .../esbuild@0.27.3/node_modules/esbuild postinstall$ node install.js
+2026-Jul-13 14:37:39.284677 #12 9.730 .../esbuild@0.27.3/node_modules/esbuild postinstall: Done
+2026-Jul-13 14:37:39.284677 #12 10.09
+2026-Jul-13 14:37:39.284677 #12 10.09 devDependencies:
+2026-Jul-13 14:37:39.284677 #12 10.09 + prettier 3.9.4
+2026-Jul-13 14:37:39.284677 #12 10.09 + typescript 5.9.3
+2026-Jul-13 14:37:39.284677 #12 10.09
+2026-Jul-13 14:37:39.284677 #12 10.15 . preinstall$ sh -c 'rm -f package-lock.json yarn.lock; case "$npm_config_user_agent" in pnpm/*) ;; *) echo "Use pnpm instead" >&2; exit 1 ;; esac'
+2026-Jul-13 14:37:39.284677 #12 10.17 . preinstall: Done
+2026-Jul-13 14:37:39.284677 #12 10.30 Done in 10.1s using pnpm v10.26.1
+2026-Jul-13 14:37:39.284677 #12 DONE 10.5s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #13 [builder 6/6] RUN pnpm --filter @workspace/api-server build
+2026-Jul-13 14:37:39.284677 #13 0.454
+2026-Jul-13 14:37:39.284677 #13 0.454 > @workspace/api-server@0.0.0 build /app/artifacts/api-server
+2026-Jul-13 14:37:39.284677 #13 0.454 > node ./build.mjs
+2026-Jul-13 14:37:39.284677 #13 0.454
+2026-Jul-13 14:37:39.284677 #13 0.755
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/index.mjs 1.6mb ⚠️
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/pino-worker.mjs 153.4kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/pino-file.mjs 142.0kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/pino-pretty.mjs 114.6kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/thread-stream-worker.mjs 7.3kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/index.mjs.map 2.5mb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/pino-worker.mjs.map 256.9kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/pino-file.mjs.map 229.0kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/pino-pretty.mjs.map 204.0kb
+2026-Jul-13 14:37:39.284677 #13 0.755 dist/thread-stream-worker.mjs.map 12.0kb
+2026-Jul-13 14:37:39.284677 #13 0.755
+2026-Jul-13 14:37:39.284677 #13 0.755 ⚡ Done in 226ms
+2026-Jul-13 14:37:39.284677 #13 DONE 0.8s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #14 [stage-1 3/5] COPY --from=builder /app/artifacts/api-server/dist ./dist
+2026-Jul-13 14:37:39.284677 #14 DONE 0.0s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #15 [stage-1 4/5] COPY --from=builder /app/artifacts/api-server/package.json ./package.json
+2026-Jul-13 14:37:39.284677 #15 DONE 0.0s
+2026-Jul-13 14:37:39.284677
+2026-Jul-13 14:37:39.284677 #16 [stage-1 5/5] RUN corepack enable && corepack prepare pnpm@latest --activate && pnpm install --prod --frozen-lockfile --ignore-scripts
+2026-Jul-13 14:37:39.284677 #16 0.590 Preparing pnpm@latest for immediate activation...
+2026-Jul-13 14:37:39.284677 #16 2.459 [ERR_PNPM_NO_LOCKFILE] Cannot install with "frozen-lockfile" because pnpm-lock.yaml is absent
+2026-Jul-13 14:37:39.284677 #16 2.459
+2026-Jul-13 14:37:39.284677 #16 2.459 Note that in CI environments this setting is true by default. If you still need to run install in such cases, use "pnpm install --no-frozen-lockfile"
+2026-Jul-13 14:37:39.284677 #16 ERROR: process "/bin/sh -c corepack enable && corepack prepare pnpm@latest --activate && pnpm install --prod --frozen-lockfile --ignore-scripts" did not complete successfully: exit code: 1
+2026-Jul-13 14:37:39.284677 ------
+2026-Jul-13 14:37:39.284677 > [stage-1 5/5] RUN corepack enable && corepack prepare pnpm@latest --activate && pnpm install --prod --frozen-lockfile --ignore-scripts:
+2026-Jul-13 14:37:39.284677 0.590 Preparing pnpm@latest for immediate activation...
+2026-Jul-13 14:37:39.284677 2.459 [ERR_PNPM_NO_LOCKFILE] Cannot install with "frozen-lockfile" because pnpm-lock.yaml is absent
+2026-Jul-13 14:37:39.284677 2.459
+2026-Jul-13 14:37:39.284677 2.459 Note that in CI environments this setting is true by default. If you still need to run install in such cases, use "pnpm install --no-frozen-lockfile"
+2026-Jul-13 14:37:39.284677 ------
+2026-Jul-13 14:37:39.284677 Dockerfile.api:23
+2026-Jul-13 14:37:39.284677 --------------------
+2026-Jul-13 14:37:39.284677 22 | # Install production dependencies only
+2026-Jul-13 14:37:39.284677 23 | >>> RUN corepack enable && corepack prepare pnpm@latest --activate \
+2026-Jul-13 14:37:39.284677 24 | >>> && pnpm install --prod --frozen-lockfile --ignore-scripts
+2026-Jul-13 14:37:39.284677 25 |
+2026-Jul-13 14:37:39.284677 --------------------
+2026-Jul-13 14:37:39.284677 ERROR: failed to build: failed to solve: process "/bin/sh -c corepack enable && corepack prepare pnpm@latest --activate && pnpm install --prod --frozen-lockfile --ignore-scripts" did not complete successfully: exit code: 1
+2026-Jul-13 14:37:39.284677 exit status 1
+2026-Jul-13 14:37:39.338094 ========================================
+2026-Jul-13 14:37:39.343196 Deployment failed. Removing the new version of your application.
+2026-Jul-13 14:37:39.726052 Gracefully shutting down build container: yfj225utjfmfurr5ybolg1rr
