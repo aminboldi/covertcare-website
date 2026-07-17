@@ -1,0 +1,21 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    environment:
+      - PORT=8080
+      - RESEND_API_KEY=${RESEND_API_KEY:-}
+      - NODE_ENV=${NODE_ENV:-production}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+    restart: unless-stopped
+
+  site:
+    build:
+      context: .
+      dockerfile: Dockerfile.site
+      args:
+        NGINX_CONF: docker/nginx-site-api.conf
+    depends_on:
+      - api
+    restart: unless-stopped

@@ -9,6 +9,8 @@ RUN pnpm --filter @workspace/covertcare-site build
 # ── Serve stage ───────────────────────────────────────────────────────────
 FROM nginx:alpine
 COPY --from=builder /app/artifacts/covertcare-site/dist/public /usr/share/nginx/html
-# Single-page app: send all routes to index.html
-COPY docker/nginx-spa.conf /etc/nginx/conf.d/default.conf
+# Default: standalone SPA config.  Pass NGINX_CONF=docker/nginx-site-api.conf
+# from docker-compose when colocating with the API server.
+ARG NGINX_CONF=docker/nginx-spa.conf
+COPY ${NGINX_CONF} /etc/nginx/conf.d/default.conf
 EXPOSE 80
