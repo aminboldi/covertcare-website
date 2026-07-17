@@ -190,23 +190,6 @@ export default function Pilot() {
             </ul>
           </div>
 
-          {/* Partner deck callout */}
-          <div className="bg-primary/5 border border-primary/20 rounded-lg p-8 flex flex-col md:flex-row items-start md:items-center gap-6 justify-between">
-            <div>
-              <h3 className="font-bold font-serif text-lg text-primary mb-2">CovertCare Partner Pitch Deck</h3>
-              <p className="text-sm text-foreground/80 leading-relaxed max-w-xl">
-                A structured overview of the care relay model, the proposed pilot scope, governance requirements, and the evidence base — formatted for institutional review. Suitable for sharing with clinical leads, security advisors, and funding contacts.
-              </p>
-            </div>
-            <a
-              href="/pitch/"
-              className="inline-flex shrink-0 h-11 items-center justify-center rounded-sm bg-primary px-6 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 transition-colors gap-2"
-            >
-              View partner deck
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            </a>
-          </div>
-
           <div className="text-center pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground mb-6 max-w-xl mx-auto">
               This form is for organizations considering a discovery or pilot partnership. Do not include patient details, symptoms, medical records, injury descriptions, incident evidence, precise locations, political information, or urgent requests.
