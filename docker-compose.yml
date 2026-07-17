@@ -1,41 +1,13 @@
 services:
-  api:
+  app:
     build:
       context: .
-      dockerfile: Dockerfile.api
+      dockerfile: Dockerfile
+    ports:
+      - "${PORT:-80}:80"
     environment:
       - PORT=8080
       - RESEND_API_KEY=${RESEND_API_KEY:-}
       - NODE_ENV=${NODE_ENV:-production}
       - LOG_LEVEL=${LOG_LEVEL:-info}
     restart: unless-stopped
-
-  site:
-    build:
-      context: .
-      dockerfile: Dockerfile.site
-      args:
-        NGINX_CONF: docker/nginx-site-api.conf
-    depends_on:
-      - api
-    restart: unless-stopped
-    networks:
-      - default
-      - coolify
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.covertcare.rule=Host(`covertcare.ir`) || Host(`www.covertcare.ir`)"
-      - "traefik.http.routers.covertcare.entrypoints=websecure"
-      - "traefik.http.routers.covertcare.tls=true"
-      - "traefik.http.routers.covertcare.tls.certresolver=letsencrypt"
-      - "traefik.http.services.covertcare.loadbalancer.server.port=80"
-      # HTTP → HTTPS redirect
-      - "traefik.http.routers.covertcare-http.rule=Host(`covertcare.ir`) || Host(`www.covertcare.ir`)"
-      - "traefik.http.routers.covertcare-http.entrypoints=web"
-      - "traefik.http.middlewares.covertcare-redirect.redirectscheme.scheme=https"
-      - "traefik.http.middlewares.covertcare-redirect.redirectscheme.permanent=true"
-      - "traefik.http.routers.covertcare-http.middlewares=covertcare-redirect"
-
-networks:
-  coolify:
-    external: true
